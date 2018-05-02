@@ -9,7 +9,9 @@ To build the image:
 
 ### Todo
 
- - Install docker
- - Install docker-compose
- - Start on a default notebook
- - Start without password
+ - [ ] Install docker
+ - [ ] Install docker-compose
+ - [ ] Start on a default notebook
+ - [ ] Start without password
+ - [ ] Auto start browser
+
