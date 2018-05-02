@@ -29,3 +29,12 @@ USER jovyan
 RUN /opt/conda/bin/pip install --no-cache-dir bash_kernel
 RUN /opt/conda/bin/python -m bash_kernel.install
 
+# Set config file and default notebook
+COPY --chown=jovyan:users jupyter_notebook_config.py /home/jovyan/.jupyter/jupyter_notebook_config.py
+COPY --chown=jovyan:users notebook.ipynb /home/jovyan/work/notebook.ipynb
+
+# Set default notebook as readonly
+RUN chmod a-w /home/jovyan/work/notebook.ipynb
+
+# Start default notebook and start without password
+CMD ["start-notebook.sh", "work/notebook.ipynb", "--ip=0.0.0.0", "--NotebookApp.token=''"]
