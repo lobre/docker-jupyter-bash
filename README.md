@@ -9,8 +9,8 @@ To build the image:
 
 ### Todo
 
- - [ ] Install docker
- - [ ] Install docker-compose
+ - [x] Install docker
+ - [x] Install docker-compose
  - [ ] Start on a default notebook
  - [ ] Start without password
  - [ ] Auto start browser
